@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecommendGym", "RecommendGym\RecommendGym.csproj", "{163C4810-72F3-4B01-AA0E-C2A9062A114D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{163C4810-72F3-4B01-AA0E-C2A9062A114D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163C4810-72F3-4B01-AA0E-C2A9062A114D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163C4810-72F3-4B01-AA0E-C2A9062A114D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163C4810-72F3-4B01-AA0E-C2A9062A114D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
