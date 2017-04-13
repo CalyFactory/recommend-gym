@@ -22,5 +22,10 @@ namespace RecommendGym
             var finalString = new String(stringChars);
             return finalString;
         }
+
+        public static double GetSigmoidResult(double x)
+        {
+            return 1 / (1 + Math.Exp(-x)) - 0.5;
+        }
     }
 }
