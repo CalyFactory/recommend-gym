@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecommendGym.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace RecommendGym
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserModel userModel = new UserModel(100);
+            userModel.PrintValue();
         }
     }
 }
