@@ -41,5 +41,62 @@ namespace RecommendGym
             Console.WriteLine("negative : " + negative);
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int userPropensitySize = 100;
+            int userSize = 100;
+            int itemFeatureSize = 10;
+            int itemSize = 100;
+            UserModel[] userList = new UserModel[userSize];
+
+            for(int i = 0; i < userSize; i++)
+            {
+                userList[i] = new UserModel(userPropensitySize);
+            }
+
+
+
+
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ItemModel[] itemList = new ItemModel[10];
+            for(int i = 0; i < 10; i++)
+            {
+                itemList[i] = new ItemModel(10);
+            }
+
+            Console.WriteLine("=================================");
+            for(int i = 0; i < 10; i++)
+            {
+                for(int j = 0; j < 10; j++)
+                {
+                    Console.Write(
+                        String.Format("{0,10:0.0} ",
+                            (Util.GetEuclideanDistance(itemList[i].GetFeatureList(), itemList[j].GetFeatureList()))
+                        )
+                    );
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("=================================");
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.Write(
+                        String.Format("{0,10:0.0} ",
+                            (Util.GetPearsonCofficient(itemList[i].GetFeatureList(), itemList[j].GetFeatureList()))
+                        )
+                    );
+                }
+                Console.WriteLine();
+            }
+
+        }
     }
 }
