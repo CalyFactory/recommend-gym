@@ -84,8 +84,7 @@ namespace RecommendGym
                 sumPowX += Math.Pow(featureList1[i], 2);
                 sumPowY += Math.Pow(featureList2[i], 2);
             }
-            //            Console.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}", sumXY, sumX, sumY, sumPowX, sumPowY));
-            //            Console.WriteLine(result1 + " " + result2 + " " + result3);
+
             result1 = (sumXY - sumX * sumY / n);
             result2 = Math.Sqrt(((sumPowX - Math.Pow(sumX, 2) / n) * (sumPowY - Math.Pow(sumY, 2) / n)));
             return result1/result2;

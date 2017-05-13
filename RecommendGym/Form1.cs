@@ -55,11 +55,6 @@ namespace RecommendGym
                 userList[i] = new UserModel(userPropensitySize);
             }
 
-
-
-
-
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -93,6 +88,19 @@ namespace RecommendGym
                             (Util.GetPearsonCofficient(itemList[i].GetFeatureList(), itemList[j].GetFeatureList()))
                         )
                     );
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("=================================");
+            for(int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    double person =Util.GetPearsonCofficient(itemList[i].GetFeatureList(), itemList[j].GetFeatureList());
+                    if (person >= 0.2)
+                    {
+                        Console.Write(" " + (j + 1));
+                    }
                 }
                 Console.WriteLine();
             }
