@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace RecommendGym.Model
 {
-    class PropensityModel
+    class NeuralModel
     {
         private double weight;
         private double bias;
 
-        public PropensityModel(double weight, double bias)
+        public NeuralModel(double weight, double bias)
         {
             this.weight = weight;
             this.bias = bias;
@@ -21,11 +21,5 @@ namespace RecommendGym.Model
         {
             Console.WriteLine("weight : " + weight + " bias : " + bias);
         }
-
-        public double GetCalculateOutput(double value)
-        {
-            return value * weight + bias;
-        }
-
     }
 }

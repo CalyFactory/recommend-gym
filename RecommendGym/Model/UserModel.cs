@@ -23,13 +23,31 @@ namespace RecommendGym.Model
 
         private void GeneratePropensityRandomly()
         {
-            Random random = new Random();
+            Random random = new Random(Guid.NewGuid().GetHashCode());
             for(int i = 0; i < propensitySize; i++)
             {
-                double weight = random.NextDouble();
-                double bias = random.NextDouble();
+                double weight = random.NextDouble() - 0.5;
+                double bias = random.NextDouble() - 0.5;
                 this.propensityList[i] = new PropensityModel(weight, bias);
             }
+        }
+
+        public double GetPreference(double[] featureList)
+        {
+            double[] layer = new double[propensitySize];
+            double preference = 0;
+            for(int k = 0; k < propensitySize; k++)
+            { 
+                for(int i = 0; i < featureList.Length; i++)
+                {
+                    layer[k] += propensityList[k].GetCalculateOutput(featureList[i]);
+                }
+                layer[k] = Util.GetSigmoidResult(layer[k]);
+                preference += layer[k];
+            }
+            
+
+            return Util.GetSigmoidResult(preference);
         }
 
         public int GetPropensitySize()
